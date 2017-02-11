@@ -18,8 +18,8 @@
       <file leaf-file-name="numpy_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://D:/python/python_workspace/numpy_demo/numpy_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="118" column="45" lean-forward="true" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+            <state relative-caret-position="232">
+              <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -28,8 +28,8 @@
       <file leaf-file-name="datingTestSet.txt" pinned="false" current-in-tab="false">
         <entry file="file://D:/python/python_workspace/numpy_demo/datingTestSet.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="42" />
+            <state relative-caret-position="270">
+              <caret line="999" column="37" lean-forward="false" selection-start-line="999" selection-start-column="37" selection-end-line="999" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -49,6 +49,7 @@
       <list>
         <option value="D:/python/python_workspace/numpy_01/numpy_01.py" />
         <option value="D:/python/python_workspace/numpy_demo/numpy_01.py" />
+        <option value="D:/python/python_workspace/numpy_demo/datingTestSet.txt" />
         <option value="D:/python/python_workspace/numpy_demo/numpy_demo.py" />
       </list>
     </option>
@@ -295,9 +296,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -366,16 +367,16 @@
     </entry>
     <entry file="file://D:/python/python_workspace/numpy_demo/datingTestSet.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="42" />
+        <state relative-caret-position="270">
+          <caret line="999" column="37" lean-forward="false" selection-start-line="999" selection-start-column="37" selection-end-line="999" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/python/python_workspace/numpy_demo/numpy_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="118" column="45" lean-forward="true" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+        <state relative-caret-position="232">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -33,6 +33,21 @@ def demo_01():
     # 输出第三行，第四列
     print(all_data_03[2,3])
 
+    # 获得每一行的最后一列是否为非数字元素对应的布尔矩阵
+    data_nan = np.isnan(all_data_01[:,-1])
+    print(data_nan)
+    # 将最后一列的非数字转换为0
+    all_data_01[data_nan,-1] = 0
+    print(all_data_01)
+    # 取出最后一列
+    last_col = all_data_01[:,-1]
+    # 对最后一列进行计算，求和，最大值，最小值，均值
+    print(last_col.sum())
+    print(last_col.max())
+    print(last_col.min())
+    print(last_col.mean())
+
+
 def demo_02():
     '''
     向量和矩阵
@@ -119,6 +134,6 @@ def demo_03():
     print(matrix.sum(axis=0))   # axis=0 按列求和
 
 if __name__ == "__main__":
-    # demo_01()
+    demo_01()
     # demo_02()
-    demo_03()
+    # demo_03()
