@@ -137,22 +137,36 @@ def demo_03():
     b = np.arange(5)
 
     print(a-b) # 两数组对应元素相减
-    print(b**4) # 对数组b每个元素4次方操作
+    print(b**4) # 对数组b每个元素4次方运算
+    print(np.exp(b)) # 对数组b每个元素做e^x运算
+    print(np.sqrt(b)) # 对数组b每个元素求平方根
 
     A = np.array([
-        [1,2],
-        [3,4]
+        [1,2,3,4],
+        [3,4,5,6],
+        [1,3,5,7],
+        [2,3,4,5]
     ])
 
     B = np.array([
-        [5,6],
-        [7,8]
+        [5,6,7,8],
+        [7,8,9,10],
+        [2,3,4,5],
+        [1,2,3,4]
     ])
 
     print(A*B) # 两数组对应元素相乘（内积）
 
     print(A.dot(B)) # 两数组进行矩阵乘法
     print(np.dot(A,B)) # 两数组进行矩阵乘法
+
+    print(np.vstack((A,B))) # 数组竖直拼接
+    print(np.hstack((A,B))) # 数组水平拼接
+
+    print(np.vsplit(A,2)) # 数组竖直（高）切分为2部分
+    print(np.hsplit(A,2)) # 数组水平（宽）切分为2部分
+    print(np.hsplit(A,(1,2))) # 数组水平（宽）切分，切分位置为水平索引1前，水平索引2前
+    print(np.vsplit(A,(1,2))) # 数组竖直（高）切分，切分位置为水平索引1前，水平索引2前
 
 
 def demo_04():
@@ -179,13 +193,62 @@ def demo_04():
     print(np.ones(shape=(2,3,4),dtype=np.int16)) # 创建形状为(2,3,4)的1数组，元素类型为int16
     print(np.ones(shape=(2,3,4),dtype=np.str)) # 创建形状为(2,3,4)的1数组，元素类型为str
 
-    print(np.random.random((2,3))) # 随机生成一个两行三列的数组，元素范围在[0,1]中
+    random_array = np.random.random((2,3)) # 随机生成一个两行三列的数组，元素范围在[0,1]中
+    print(random_array)
+    print(np.floor(10 * random_array)) # 向下取整
+    print(random_array.shape)
+    print(random_array.ravel()) # 把数组解开为一维数组
 
+    # random_array.shape = (3,2) # 改变数组形状，使其变为三行两列数组
+    print(random_array.reshape(3,2)) # 改变数组形状，使其变为三行两列数组(同上)
+
+    print(random_array)
+    print(random_array.T) # 转置
+
+
+def demo_05():
+    '''
+    数组的赋值与拷贝
+    :return:
+    '''
+
+
+    # 数组a，b为同一对象
+    a = np.arange(12)
+    b = a
+    print(b is a)
+    print(id(a))
+    print(id(b))
+    a.shape = (3,4)
+    print(b.shape)
+
+    # 数组a，c为不同对象，但共用数据
+    a = np.arange(12)
+    c = a.view() # 浅复制
+    print(c is a)
+    print(id(a))
+    print(id(c))
+    c.shape = (2,6)
+    print(a.shape)
+    c[0,4] = 1000
+    print(a)
+
+    # 数组a，d为不同对象，独立数据
+    a = np.arange(12).reshape(3,4)
+    d = a.copy() # 深复制
+    print(id(a))
+    print(id(d))
+    print(a)
+    print(d)
+    a[1,3] = 1000
+    print(a)
+    print(d)
 
 
 
 if __name__ == "__main__":
     # demo_01()
     # demo_02()
-    demo_03()
+    # demo_03()
     # demo_04()
+    demo_05()
