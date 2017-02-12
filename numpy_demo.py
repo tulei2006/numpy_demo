@@ -244,7 +244,47 @@ def demo_05():
     print(a)
     print(d)
 
+    # a = np.arange(0,40,10)
+    a = np.array([
+        [1,2],
+        [3,4]
+    ])
+    print(a)
 
+    print(np.tile(a,(2,4))) # 复制数组a，行复制两遍，列复制四遍
+
+
+def demo_06():
+    '''
+    数组的排序与索引
+    :return:
+    '''
+
+    # 初始化数据
+    data = np.sin(np.arange(20)).reshape(5,4)
+    print(data)
+
+    index_0 = data.argmax(axis=0) # 按列求取最大值索引
+    print(index_0)
+    print(data[index_0,range(data.shape[1])]) # 按列求取最大值
+    print(data.max(axis=0)) # 按列求取最大值（同上）
+
+    a = np.array([
+        [3,9,7],
+        [8,4,6]
+    ])
+
+    print(a)
+    b = np.sort(a, axis=1) # 行内排序[a.sort(axis=1),行内排序，没有返回值，改变数组a]
+    print(b)
+
+    c = np.sort(a, axis=0) # 列内排序[a.sort(axis=0),列内排序，没有返回值，改变数组a]
+    print(c)
+
+    arr = np.array([4,2,3,0,1])
+    index_sort = np.argsort(arr) # 返回数组排序的索引值
+    print(index_sort)
+    print(arr[index_sort])
 
 if __name__ == "__main__":
     # demo_01()
@@ -252,3 +292,4 @@ if __name__ == "__main__":
     # demo_03()
     # demo_04()
     demo_05()
+    # demo_06()
