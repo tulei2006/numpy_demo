@@ -111,9 +111,9 @@ def demo_03():
     print(vector)
     print(vector.dtype)
 
-    # 向量
+    # 向量（一维数组）
     vector = np.array([1, 2, 3, 4, 5])
-    # 矩阵
+    # 矩阵（二维数组）
     matrix = np.array([
         [1, 2, 3, 4, 5],
         [6, 7, 8, 9, 10],
@@ -133,7 +133,59 @@ def demo_03():
     print(matrix.sum(axis=1))   # axis=1 按行求和
     print(matrix.sum(axis=0))   # axis=0 按列求和
 
+    a = np.array([11,12,13,14,15])
+    b = np.arange(5)
+
+    print(a-b) # 两数组对应元素相减
+    print(b**4) # 对数组b每个元素4次方操作
+
+    A = np.array([
+        [1,2],
+        [3,4]
+    ])
+
+    B = np.array([
+        [5,6],
+        [7,8]
+    ])
+
+    print(A*B) # 两数组对应元素相乘（内积）
+
+    print(A.dot(B)) # 两数组进行矩阵乘法
+    print(np.dot(A,B)) # 两数组进行矩阵乘法
+
+
+def demo_04():
+    '''
+    数组的创建于初始化
+    :return:
+    '''
+
+    # 创建一维数组数组0-14，变换为三行五列数组
+    arr = np.arange(15).reshape(3,5)
+    print(arr)
+    print(arr.shape) # 数组形状为三行五列(3,5)
+    print(arr.ndim) # 数组空间维数为2维
+    print(arr.size) # 数组长度为15
+    print(arr.dtype.name) # 数组内元素类型名字
+
+    print(np.arange(3,38,5)) # 生成在范围[3,38)中，步长为5的数组
+    print(np.arange(3,38,0.5)) # 生成在范围[3,38)中，步长为0.5的数组
+
+    print(np.linspace(3,5*np.pi,num=10)) # 生成范围[3,5π]中，均匀取出10个数组成的数组
+
+
+    print(np.zeros(shape=(3,4))) # 创建三行四列的零数组
+    print(np.ones(shape=(2,3,4),dtype=np.int16)) # 创建形状为(2,3,4)的1数组，元素类型为int16
+    print(np.ones(shape=(2,3,4),dtype=np.str)) # 创建形状为(2,3,4)的1数组，元素类型为str
+
+    print(np.random.random((2,3))) # 随机生成一个两行三列的数组，元素范围在[0,1]中
+
+
+
+
 if __name__ == "__main__":
-    demo_01()
+    # demo_01()
     # demo_02()
-    # demo_03()
+    demo_03()
+    # demo_04()
