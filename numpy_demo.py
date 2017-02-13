@@ -286,10 +286,81 @@ def demo_06():
     print(index_sort)
     print(arr[index_sort])
 
+
+def demo_07():
+    '''
+    实例
+    :return:
+    '''
+
+    # 8*8棋盘矩阵
+    # 其中1,3,5,7行&&0,2,4,6列的元素为1
+    # 1,3,5,7列&&0,2,4,6行的元素也为1
+    z = np.zeros(shape=(8,8),dtype=int)
+    z[1::2,::2] = 1
+    z[::2,1::2] = 1
+    print(z)
+
+    # 矩阵归一化
+    r = 10 * np.random.random((5,5))
+    print(r)
+    r_min, r_max = r.min(), r.max()
+    print(r_min)
+    print(r_max)
+    r = (r - r_min)/(r_max - r_min)
+    print(r)
+
+    # 不同维度矩阵相加，相当于把维度低的矩阵先平铺，然后再相加
+    a = np.zeros((5,5))
+    a += np.arange(5)
+    print(a)
+
+    # 生成[0,10]之间均匀分布的11个数，包括0和10
+    b = np.linspace(0,10,11)
+    print(b)
+    b = np.linspace(0,10,11,endpoint=False) # 不保留最后一个值
+    print(b)
+    b = np.linspace(0,10,11,endpoint=False,retstep=True) # 多返回一个步长值
+    print(b)
+
+    # 交换矩阵其中两行
+    c = np.arange(25).reshape(5,5)
+    print(c)
+    c[[2,4]] = c[[4,2]] # 交换第三行（index=2）和第五行（index=4）
+    print(c)
+
+    # 找出数组中与给定值最接近的数的索引
+    d = np.array([
+        [0,1,2,3],
+        [4,7,6,9]
+    ])
+    print(d)
+    d_num = 7.1
+    print(np.abs(d-d_num).argmin())
+
+    # 判断二维数组（矩阵）中是否有一整列数为0
+    e = np.random.randint(0,4,(2,10)) # 随机生成整型数组，元素范围[0,4]，数组形状为2行10列
+    print(e)
+    print(e.any(axis=0)) # 每列存在不为0的元素时，该列返回Ture，否则（全为0）该列返回False
+
+    # 生成二维高斯矩阵
+    x,y = np.meshgrid(np.linspace(-1,1,10),np.linspace(-1,1,10)) # 10行10列，范围[-1,1]之间，x按照行排列，y按照列排列，互为转置
+    D = np.sqrt(x**2 + y**2) # 矩阵x，y对应元素平方和开方（矩阵）
+    print(x)
+    print(y)
+    print(D)
+    sigma,mu = 1,0 # 方差为1，均值为0
+    a = np.exp(-(D-mu)**2/(2*sigma**2)) # 高斯分布（正态分布）
+    print(a)
+
+
+
+
 if __name__ == "__main__":
     # demo_01()
     # demo_02()
     # demo_03()
     # demo_04()
-    demo_05()
+    # demo_05()
     # demo_06()
+    demo_07()
